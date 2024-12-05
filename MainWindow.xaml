@@ -1,0 +1,60 @@
+﻿<Window x:Class="EX_AUTO_AP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EX_AUTO_AP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1010">
+    <Grid Background="Beige">
+        <Canvas x:Name="PrimerCanvas" HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="327" Margin="31,31,0,0" Background="#FF4FB39A">
+            <Label Content="Célula Identidad" HorizontalAlignment="Left" Height="25" Margin="30,150,0,0" VerticalAlignment="Top" Width="127"/>
+            <TextBox x:Name="TextBox_CI" HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Canvas.Left="150" Canvas.Top="151"/>
+            <Label Content="Nombre Apellidos" HorizontalAlignment="Left" Height="25" Margin="30,190,0,0" VerticalAlignment="Top" Width="127"/>
+            <TextBox x:Name="TextBoc_NA"  Height="25" Width="116" Margin="150, 190" TextWrapping="Wrap"></TextBox>
+            <Label Content="Fecha Nacimiento" HorizontalAlignment="Left" Height="25" VerticalAlignment="Center" Width="127" Canvas.Left="20" Canvas.Top="230"/>
+            <TextBox x:Name="TextBox_FN" Height="35" Width="70" HorizontalAlignment="Left" Canvas.Left="128" Canvas.Top="228" VerticalAlignment="Center"/>
+            <Label Content="Sexo" HorizontalAlignment="Left" Height="25" VerticalAlignment="Center" Width="127" Grid.ColumnSpan="2" Canvas.Left="200" Canvas.Top="230"/>
+            <ComboBox x:Name="ComboBox_Se" HorizontalAlignment="Left" Height="30" VerticalAlignment="Center" Width="40" Canvas.Left="250" Canvas.Top="230">
+                <ComboBoxItem Content="Masculino"></ComboBoxItem>
+                <ComboBoxItem Content="Femenino"></ComboBoxItem>
+                <ComboBoxItem Content="Prefiero no decirlo"></ComboBoxItem>
+            </ComboBox>
+            <Label Content="Estado Civil" HorizontalAlignment="Left" Height="25" Margin="30,280,0,0" VerticalAlignment="Top" Width="127"/>
+            <ComboBox x:Name="ComboBox_EC" Width="100" Height="25" Margin="120, 280">
+                <ComboBoxItem Content="Soltero/a"></ComboBoxItem>
+                <ComboBoxItem Content="Casado/a"></ComboBoxItem>
+                <ComboBoxItem Content="Viudo/a"></ComboBoxItem>
+                <ComboBoxItem Content="Divorsiado/a"></ComboBoxItem>
+            </ComboBox>
+            <Image Height="106" Canvas.Left="55" Canvas.Top="17" Width="192" Source="https://static.vecteezy.com/system/resources/previews/007/409/979/non_2x/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"/>
+        </Canvas>
+        <Canvas x:Name="SegundoCanvas" HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="256" Margin="382,31,0,0" Background="#FF4FB39A">
+            <Label Content="Teléfono" Margin="30, 50" Width="80"></Label>
+            <TextBox x:Name="TextBox_Tel" Width="110" Height="25" Margin="120, 50"></TextBox>
+            <Label Content="Célular" Margin="30, 100"></Label>
+            <TextBox x:Name="TextBox_Celula" Width="100" Height="25" Margin="100"></TextBox>
+            <Label Content="Email" Margin="30, 150"></Label>
+            <TextBox x:Name="TextBox_Email" Height="30" Width="150" Margin="80, 150"></TextBox>
+            <Label Content="Dirección" Margin="30, 200"></Label>
+            <TextBox x:Name="TextBox_Di" Width="140" Height="60" Margin="100, 200"></TextBox>
+            <Label Content="Nacionalidad" Margin="30, 270"></Label>
+            <ComboBox x:Name="ComboBox_Nacionalidad" Width="110" Height="25" Margin="130, 270">
+                <ComboBoxItem Content="Boliviano/a"></ComboBoxItem>
+                <ComboBoxItem Content="Extranjero"></ComboBoxItem>
+            </ComboBox>
+        </Canvas>
+
+        <Canvas x:Name="TercerCanvas" Height="30" Margin="111,410,236,44" Background="#FF4FB39A">
+            <Button x:Name="Button_R" Width="120" Height="23" Margin="10, 3" Content="Registrar" Click="Button_R_Click"></Button>
+            <Button x:Name="Button_L" Width="120" Height="23" Margin="140, 3" Content="Limpiar" Click="Button_L_Click"></Button>
+            <Button x:Name="Button_B" Width="120" Height="23" Margin="269, 3" Content="Buscar" Click="Button_B_Click"></Button>
+            <Button x:Name="Button_M" Width="120" Height="23" Margin="395, 3" Content="Mostrar" Click="Button_M_Click"></Button>
+            <Button x:Name="Button_S" Width="120" Height="23" Content="Salir" HorizontalAlignment="Left" Canvas.Left="522" Canvas.Top="3" VerticalAlignment="Center" Click="Button_S_Click"></Button>
+        </Canvas>
+
+        <ListBox Name="PersonasLista" Margin="655,1,10,100"/>
+    </Grid>
+</Window>
+
+
